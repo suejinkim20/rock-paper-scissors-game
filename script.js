@@ -1,4 +1,9 @@
 
+    //Keep track of wins, ties, losses
+    var wins = 0;
+    var ties = 0;
+    var losses = 0;
+    
 //Play the Game
 
 function playGame() {
@@ -6,10 +11,6 @@ function playGame() {
     var gamePieces = ["R", "P", "S"]
     var randomChoice = "";
 
-    //Keep track of wins, ties, losses
-    var wins = 0;
-    var ties = 0;
-    var losses = 0;
 
     //Player choice
     function myChoice() {
@@ -21,7 +22,7 @@ function playGame() {
 
     //Computer random choice
     function computerChoice() {
-        randomChoice = gamePieces[Math.floor(Math.random() * computerChoice.length)];
+        randomChoice = gamePieces[Math.floor(Math.random() * gamePieces.length)];
         console.log("Computer chooses " + randomChoice);
     }
     computerChoice()
